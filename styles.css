@@ -28,8 +28,8 @@
     background: rgba(247,244,239,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.07);
-    padding: 0 32px;
-    height: 64px;
+    padding: 0 28px;
+    height: 72px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
     text-decoration: none;
   }
 
@@ -72,6 +72,35 @@
     color: var(--blue);
     letter-spacing: -.01em;
   }
+
+.nav-logo img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 14px rgba(30,45,61,.12);
+}
+
+.nav-brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.nav-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 18px;
+  color: var(--navy);
+  letter-spacing: -.02em;
+}
+
+.nav-tagline {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-top: 2px;
+}
 
   .nav-cta {
     background: var(--navy);
@@ -143,6 +172,14 @@
     align-items: center;
     flex-wrap: wrap;
   }
+
+.hero-trust {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: -12px;
+  margin-bottom: 28px;
+  font-weight: 500;
+}
 
   .btn-primary {
     display: inline-flex;
@@ -324,12 +361,18 @@
     padding: 8px;
     box-shadow: 0 16px 40px rgba(30,45,61,.18);
     overflow: hidden;
+transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
   .screenshot-frame img {
     width: 100%;
     border-radius: 22px;
     display: block;
   }
+
+.screenshot-frame:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(30,45,61,.22);
+}
 
   .screenshot-label {
     font-family: 'Nunito', sans-serif;
@@ -515,6 +558,13 @@
     color: rgba(255,255,255,0.4);
   }
 
+.founder-note {
+  margin-top: 24px;
+  font-size: 14px;
+  color: var(--muted);
+  font-style: italic;
+}
+
   /* ── ANIMATIONS ── */
   .fade-up {
     opacity: 0;
@@ -549,7 +599,7 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
+    .hero { grid-template-columns: 1fr; padding: 92px 24px 48px; gap: 28px; }
     .hero-right { height: 380px; }
     .phone-1 { width: 160px; }
     .phone-2 { width: 140px; }
@@ -558,6 +608,7 @@
     .screenshots-grid { grid-template-columns: repeat(2, 1fr); }
     .screenshot-item:nth-child(2),
     .screenshot-item:nth-child(4) { transform: none; }
+.section-title { margin-bottom: 40px; }
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
     nav { padding: 0 20px; }
   }
