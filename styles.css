@@ -528,6 +528,25 @@
   .delay-3 { animation-delay: 0.35s; }
   .delay-4 { animation-delay: 0.5s; }
 
+  /* ── ACCESSIBILITY ── */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Visible focus states for keyboard navigation */
+  a:focus-visible,
+  button:focus-visible {
+    outline: 3px solid var(--blue);
+    outline-offset: 3px;
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 40px; }
