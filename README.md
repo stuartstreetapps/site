@@ -1,82 +1,58 @@
 # Stuart Street Apps — Website
 
-Marketing website for Stuart Street Apps. Currently features our first iOS app, *Learn About Your United States*, with a scalable structure for adding future apps.
+Marketing website for Stuart Street Apps, featuring our educational iOS app "Learn About Your United States."
 
-## Structure
+## About
 
-This is a two-page static site:
-
-- **Home** — Hero, features, screenshots, about strip, and an "Our Apps" grid
-- **Support** — Per-app support FAQs, contact, and privacy policy
-
-Page navigation is handled with a small inline JavaScript switcher (no framework required).
+This is the landing page for our app that helps users master all 50 U.S. states through interactive maps, engaging quizzes, and achievement tracking.
 
 ## Setup
 
-No build process required.
+This is a static HTML/CSS website. No build process required.
 
 ### Local Development
 
 1. Clone the repository
-2. Open `index.html` in your browser, or use a local server:
+2. Open `index.html` in your browser
+3. Or use a local server:
+   ```bash
+   # Python 3
+   python -m http.server 8000
+   
+   # Node.js
+   npx serve
+   ```
 
-```bash
-# Python 3
-python -m http.server 8000
+### Required Assets
 
-# Node.js
-npx serve
-```
-
-## Adding a New App
-
-When you launch a new app, update three places in `index.html`:
-
-### 1. Our Apps grid (Home page)
-Duplicate the `<!-- App card -->` block and update the icon, name, description, platform badge, and App Store link. Remove the `app-card-placeholder` block when you have two or more real apps.
-
-### 2. Support tabs (Support page)
-Add a new `<button class="app-tab">` to `.app-selector` with `onclick="showAppSupport('app2', this)"`.
-Add a matching `<div id="support-app2" class="support-content">` block with that app's FAQs.
-
-### 3. Privacy policy (Support page)
-Add a new `.privacy-block` inside `.privacy-section` with the app label and policy text.
-
-## Required Assets
-
-The site expects the following in the `images/` directory:
-
-| File | Used for |
-|---|---|
-| `favicon.png` | Site favicon and app card icon |
-| `apple-touch-icon.png` | iOS home screen icon |
-| `iphone-home.png` | Hero + screenshots: app home screen |
-| `iphone-map.png` | Hero + screenshots: interactive map |
-| `iphone-capitalQuiz.png` | Hero: quiz screen |
-| `iphone-quizLength.png` | Screenshots: quiz length selection |
-| `iphone-medals.png` | Screenshots: medals screen |
-| `social-preview.png` | Open Graph preview (1200×630px recommended) |
+The site expects the following images in the `images/` directory:
+- `favicon.png` - Site favicon
+- `apple-touch-icon.png` - iOS home screen icon
+- `iphone-home.png` - App home screen screenshot
+- `iphone-map.png` - Interactive map screenshot
+- `iphone-capitalQuiz.png` - Quiz screen screenshot
+- `iphone-quizLength.png` - Quiz length selection screenshot
+- `iphone-medals.png` - Medals achievement screenshot
+- `social-preview.png` - Open Graph preview image (1200x630px recommended)
 
 ## App Store
 
 [Download on the App Store](https://apps.apple.com/us/app/learn-about-your-united-states/id6752962821)
 
+## Features
+
+- Fully responsive design
+- Smooth animations with reduced-motion support
+- SEO optimized with Open Graph tags
+- Accessible keyboard navigation
+- Performance optimized (lazy loading, preconnect)
+
 ## Technologies
 
 - Semantic HTML5
 - Modern CSS with custom properties
-- Google Fonts (Lora, Nunito, DM Sans)
-- Minimal vanilla JavaScript (page switcher only)
-- No build tools, no dependencies
-
-## Features
-
-- Two-page layout with JS-driven navigation (no page reloads)
-- Fully responsive — mobile nav hides text links, stacks grids
-- Smooth animations with `prefers-reduced-motion` support
-- Accessible keyboard navigation and focus states
-- SEO and Open Graph meta tags
-- Performance optimised (lazy loading, font preconnect)
+- Google Fonts (Nunito, DM Sans)
+- Pure JavaScript-free implementation
 
 ## License
 
