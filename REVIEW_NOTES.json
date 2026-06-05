@@ -1,9 +1,10 @@
 {
-  "btn-appstore-sm": false,
-  "appstore-btn": false,
-  "studio-mark-inner": false,
-  "app-store-badge.png_refs": 3,
-  "schema_count": 4,
-  "social_preview_file_exists_root": false,
-  "app_badge_file_exists_root": false
+  "social_preview_refs_removed": true,
+  "apple_touch_icon_uses_logo": true,
+  "nav_uses_logo": true,
+  "app_store_badge_refs": 3,
+  "app_store_badge_display_height_px": 40,
+  "mobile_nav_visible": true,
+  "privacy_distinguishes_app_from_website_analytics": true,
+  "standardized_u_s_wording": true
 }

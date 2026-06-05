@@ -27,13 +27,12 @@ This is a static HTML/CSS website. No build process required.
 
 The site expects the following images in the `images/` directory:
 - `favicon.png` - Site favicon
-- `apple-touch-icon.png` - iOS home screen icon
+- `logo.png` - Stuart Street Apps logo and touch icon
 - `iphone-home.png` - App home screen screenshot
 - `iphone-map.png` - Interactive map screenshot
 - `iphone-capitalQuiz.png` - Quiz screen screenshot
 - `iphone-quizLength.png` - Quiz length selection screenshot
 - `iphone-medals.png` - Medals achievement screenshot
-- `social-preview.png` - Open Graph preview image (1200x630px recommended)
 - `app-store-badge.png` - Official Apple "Download on the App Store" badge
 
 ## App Store
