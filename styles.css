@@ -466,23 +466,6 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     line-height: 1.6;
   }
 
-  .appstore-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    background: white;
-    color: var(--navy);
-    font-family: 'Nunito', sans-serif;
-    font-weight: 900;
-    font-size: 16px;
-    padding: 16px 32px;
-    border-radius: 100px;
-    text-decoration: none;
-    box-shadow: 0 8px 28px rgba(0,0,0,.2);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .appstore-btn:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(0,0,0,.25); }
-
   /* ── FOOTER ── */
   footer {
     background: var(--navy);
@@ -601,31 +584,6 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     align-items: center;
     gap: 14px;
     flex-shrink: 0;
-  }
-
-  .studio-mark-inner {
-    width: 140px;
-    height: 140px;
-    border-radius: 32px;
-    background: white;
-    box-shadow: 0 8px 32px rgba(44,74,46,0.12);
-    overflow: hidden;
-  }
-
-  .studio-mark-inner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 32px;
-  }
-
-  .studio-mark-label {
-    font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    font-size: 11px;
-    letter-spacing: .2em;
-    text-transform: uppercase;
-    color: var(--muted);
   }
 
   /* ── OUR APPS ── */
@@ -758,23 +716,6 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     align-items: center;
     flex-wrap: wrap;
   }
-
-  .btn-appstore-sm {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    border: 2px solid var(--navy);
-    color: var(--navy);
-    font-family: 'Nunito', sans-serif;
-    font-weight: 800;
-    font-size: 13px;
-    padding: 11px 20px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: background 0.2s, color 0.2s;
-  }
-  .btn-appstore-sm:hover { background: var(--navy); color: white; }
-
   /* Phone mockup inside app card */
   .app-card-right {
     flex-shrink: 0;
@@ -993,6 +934,70 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     margin: 0;
   }
 
+
+  /* ── APP STORE BADGE ── */
+  .app-store-link {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.15s;
+  }
+
+  .app-store-link:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  .app-store-link-centered {
+    justify-content: center;
+  }
+
+  .app-store-badge {
+    height: 48px;
+    width: auto;
+    display: block;
+  }
+
+  .download .app-store-badge {
+    height: 54px;
+  }
+
+  /* ── STUDIO SUMMARY CARD ── */
+  .studio-summary-card {
+    background: white;
+    border: 1.5px solid var(--cream2);
+    border-radius: 24px;
+    padding: 32px;
+    max-width: 300px;
+    box-shadow: 0 8px 32px rgba(44,74,46,.12);
+  }
+
+  .studio-summary-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 1.15;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+
+  .studio-summary-card p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .studio-summary-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: var(--blue);
+  }
+
   /* ── ACCESSIBILITY ── */
   @media (prefers-reduced-motion: reduce) {
     *,
@@ -1029,7 +1034,8 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     .nav-links { display: none; }
     .studio-hero { padding: 100px 24px 60px; }
     .studio-hero-inner { grid-template-columns: 1fr; }
-    .studio-hero-mark { display: none; }
+    .studio-hero-mark { align-items: flex-start; }
+    .studio-summary-card { max-width: none; width: 100%; }
     .studio-pillars { gap: 8px; }
     .our-apps { padding: 60px 24px; }
     .app-card { grid-template-columns: 1fr; padding: 24px; gap: 0; }
@@ -1038,4 +1044,8 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     .app-support { padding: 60px 24px; }
     .simple-page { padding: 100px 24px 60px; }
     .footer-links { gap: 16px; }
+    .app-store-badge { height: 44px; }
+    .download .app-store-badge { height: 48px; }
   }
+
+

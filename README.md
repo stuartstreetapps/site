@@ -34,6 +34,7 @@ The site expects the following images in the `images/` directory:
 - `iphone-quizLength.png` - Quiz length selection screenshot
 - `iphone-medals.png` - Medals achievement screenshot
 - `social-preview.png` - Open Graph preview image (1200x630px recommended)
+- `app-store-badge.png` - Official Apple "Download on the App Store" badge
 
 ## App Store
 
