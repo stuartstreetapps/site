@@ -56,4 +56,4 @@ The site expects the following images in the `images/` directory:
 
 ## License
 
-© 2025 Stuart Street Apps. All rights reserved.
+© 2026 Stuart Street Apps. All rights reserved.
