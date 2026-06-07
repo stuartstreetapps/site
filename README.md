@@ -4,7 +4,7 @@ Marketing website for Stuart Street Apps, featuring our educational iOS app "Lea
 
 ## About
 
-This is the landing page for our app that helps users master all 50 U.S. states through interactive maps, engaging quizzes, and achievement tracking.
+This is the landing page for our app that helps users learn all 50 U.S. states through capitals, memorable facts, interactive maps, size and population comparisons, quizzes, and achievement tracking.
 
 ## Setup
 

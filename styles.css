@@ -583,7 +583,6 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   .pillar-icon { font-size: 15px; }
 
-  /* Studio icon — simple static treatment */
   .studio-hero-mark {
     display: flex;
     flex-direction: column;
@@ -591,6 +590,98 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     gap: 14px;
     flex-shrink: 0;
   }
+
+  .home-app-showcase {
+    position: relative;
+    width: min(420px, 38vw);
+    min-height: 520px;
+    justify-content: center;
+    isolation: isolate;
+  }
+
+  .home-app-showcase::before {
+    content: '';
+    position: absolute;
+    inset: 42px 26px 34px;
+    background:
+      linear-gradient(rgba(44,74,46,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(44,74,46,0.08) 1px, transparent 1px),
+      var(--cream2);
+    background-size: 34px 34px;
+    border: 1.5px solid rgba(44,74,46,0.12);
+    border-radius: 28px;
+    transform: rotate(-3deg);
+    z-index: -2;
+  }
+
+  .home-app-showcase::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    bottom: 54px;
+    width: 172px;
+    height: 88px;
+    background: rgba(200,146,42,0.16);
+    border: 1.5px solid rgba(200,146,42,0.22);
+    clip-path: polygon(0 18%, 78% 0, 100% 46%, 74% 100%, 12% 86%);
+    transform: rotate(7deg);
+    z-index: -1;
+  }
+
+  .showcase-phone {
+    width: 218px;
+    background: var(--navy);
+    border-radius: 36px;
+    padding: 10px;
+    box-shadow: 0 26px 70px rgba(30,45,61,.28);
+    overflow: hidden;
+  }
+
+  .showcase-phone img {
+    width: 100%;
+    display: block;
+    border-radius: 28px;
+  }
+
+  .learning-cues {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .learning-cue {
+    position: absolute;
+    width: 158px;
+    background: white;
+    border: 1.5px solid var(--cream2);
+    border-radius: 14px;
+    padding: 12px 14px;
+    box-shadow: 0 12px 28px rgba(44,74,46,.13);
+  }
+
+  .learning-cue span {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 4px;
+  }
+
+  .learning-cue strong {
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    line-height: 1.18;
+    color: var(--navy);
+  }
+
+  .cue-capitals { top: 54px; left: 0; }
+  .cue-facts { top: 132px; right: -2px; }
+  .cue-compare { bottom: 86px; left: -8px; }
+  .cue-map { bottom: 34px; right: 18px; }
 
   /* ── OUR APPS ── */
   .our-apps {
@@ -1107,6 +1198,14 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     .studio-hero-mark { align-items: flex-start; }
     .studio-summary-card,
     .home-feature-card { max-width: none; width: 100%; }
+    .home-app-showcase { width: 100%; min-height: 500px; }
+    .home-app-showcase::before { inset: 38px 0 28px; }
+    .showcase-phone { width: min(220px, 62vw); }
+    .learning-cue { width: min(158px, 42vw); padding: 10px 12px; }
+    .cue-capitals { top: 22px; left: 0; }
+    .cue-facts { top: 96px; right: 0; }
+    .cue-compare { bottom: 90px; left: 0; }
+    .cue-map { bottom: 30px; right: 0; }
     .studio-pillars { gap: 8px; }
     .our-apps { padding: 60px 24px; }
     .app-card { grid-template-columns: 1fr; padding: 24px; gap: 0; }
