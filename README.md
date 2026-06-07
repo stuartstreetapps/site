@@ -4,7 +4,7 @@ Marketing website for Stuart Street Apps, featuring our educational iOS app "Lea
 
 ## About
 
-This is the landing page for our app that helps users learn all 50 U.S. states through capitals, memorable facts, interactive maps, size and population comparisons, quizzes, and achievement tracking.
+This is the landing page for our app that helps users learn all 50 U.S. states through capitals, memorable facts, an interactive U.S. map, size and population details, quizzes, and achievement tracking.
 
 ## Setup
 
@@ -30,6 +30,7 @@ The site expects the following images in the `images/` directory:
 - `logo.png` - Stuart Street Apps logo and touch icon
 - `iphone-home.png` - App home screen screenshot
 - `iphone-map.png` - Interactive map screenshot
+- `iphone-stateDetails.png` - State details screenshot
 - `iphone-capitalQuiz.png` - Quiz screen screenshot
 - `iphone-quizLength.png` - Quiz length selection screenshot
 - `iphone-medals.png` - Medals achievement screenshot
