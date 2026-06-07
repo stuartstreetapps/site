@@ -29,7 +29,7 @@
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(0,0,0,0.07);
     padding: 0 28px;
-    height: 72px;
+    height: 82px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,18 +38,19 @@
   .nav-logo {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     text-decoration: none;
   }
 
   .nav-logo img {
-    width: 66px;
-    height: 44px;
-    border-radius: 10px;
+    width: 104px;
+    height: 58px;
+    border-radius: 12px;
     display: block;
     object-fit: contain;
-    background: white;
-    box-shadow: 0 4px 14px rgba(30,45,61,.12);
+    background: #fffaf2;
+    border: 1px solid rgba(44,74,46,0.12);
+    box-shadow: 0 6px 18px rgba(30,45,61,.16);
   }
 
   .nav-brand {
@@ -61,7 +62,7 @@
   .nav-title {
     font-family: 'Nunito', sans-serif;
     font-weight: 900;
-    font-size: 18px;
+    font-size: 19px;
     color: var(--navy);
     letter-spacing: -.02em;
   }
@@ -77,7 +78,7 @@
   .nav-links {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
   }
 
   .nav-link {
@@ -86,7 +87,7 @@
     font-size: 13px;
     color: var(--muted);
     text-decoration: none;
-    padding: 7px 14px;
+    padding: 7px 12px;
     border-radius: 100px;
     transition: color 0.2s, background 0.2s;
   }
@@ -1174,7 +1175,7 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
-    .hero { grid-template-columns: 1fr; padding: 92px 24px 48px; gap: 28px; }
+    .hero { grid-template-columns: 1fr; padding: 104px 24px 48px; gap: 28px; }
     .hero-right { height: 380px; }
     .phone-1 { width: 160px; }
     .phone-2 { width: 140px; }
@@ -1185,15 +1186,15 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
     .screenshot-item:nth-child(4) { transform: none; }
     .section-title { margin-bottom: 40px; }
     .about-inner { grid-template-columns: 1fr; gap: 40px; }
-    nav { padding: 0 16px; height: 64px; gap: 12px; }
+    nav { padding: 0 14px; height: 70px; gap: 10px; }
     .nav-logo { gap: 10px; min-width: 0; }
-    .nav-logo img { width: 52px; height: 36px; border-radius: 8px; }
+    .nav-logo img { width: 72px; height: 44px; border-radius: 9px; }
     .nav-brand { min-width: 0; }
-    .nav-title { font-size: 15px; white-space: nowrap; }
+    .nav-title { font-size: 14px; white-space: nowrap; }
     .nav-tagline { display: none; }
     .nav-links { display: flex; flex-shrink: 0; }
-    .nav-link { font-size: 12px; padding: 6px 10px; max-width: 176px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .studio-hero { padding: 100px 24px 60px; }
+    .nav-link { font-size: 12px; padding: 6px 8px; white-space: nowrap; }
+    .studio-hero { padding: 110px 24px 60px; }
     .studio-hero-inner { grid-template-columns: 1fr; }
     .studio-hero-mark { align-items: flex-start; }
     .studio-summary-card,
@@ -1221,8 +1222,9 @@ transition: transform 0.25s ease, box-shadow 0.25s ease;
 
   @media (max-width: 420px) {
     nav { padding: 0 12px; gap: 8px; }
-    .nav-logo img { width: 44px; height: 32px; }
-    .nav-title { font-size: 13px; }
+    .nav-logo img { width: 58px; height: 38px; }
+    .nav-brand { display: none; }
+    .nav-title { font-size: 12px; }
     .nav-links { gap: 2px; }
-    .nav-link { font-size: 11px; padding: 6px 8px; max-width: 122px; }
+    .nav-link { font-size: 11px; padding: 6px 6px; }
   }
